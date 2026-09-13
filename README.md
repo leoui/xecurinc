@@ -9,4 +9,4 @@ Hosted on GitHub Pages. Pages after publishing:
 - `/privacy.html` — Privacy Policy
 - `/terms.html` — Terms of Use (EULA)
 
-© 2026 Lewi Verdatama. All rights reserved.
+© 2026 Xecurinc. All rights reserved.
