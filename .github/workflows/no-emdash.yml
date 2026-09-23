@@ -1,0 +1,17 @@
+name: No em dashes
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if an em dash (—) exists in HTML/MD
+        run: |
+          if grep -rnP "\x{2014}" --include="*.html" --include="*.md" . ; then
+            echo "::error::Em dash (—) found. Replace with comma/colon/hyphen."
+            exit 1
+          fi
+          echo "No em dashes. ✓"
